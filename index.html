@@ -4,46 +4,114 @@
   <meta charset="UTF-8">
   <title>Order Form Prelim</title>
   <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all">
+  <style type="text/css">
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+    html,
+    body {
+      height: 100%;
+      /* The html and body elements cannot have any padding or margin. */
+    }
+
+    /* Wrapper for page content to push down footer */
+    #wrap {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      /* Negative indent footer by it's height */
+      margin: 0 auto -60px;
+    }
+
+    .marketing {
+      text-align: center;
+      color: #5a5a5a;
+    }
+
+    /* Set the fixed height of the footer here */
+    #push,
+    #footer {
+      height: 60px;
+    }
+    #footer {
+      background-color: #f5f5f5;
+    }
+
+    /* Lastly, apply responsive CSS fixes as necessary */
+    @media (max-width: 767px) {
+      #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+
+
+    /* Custom page CSS
+    -------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+    #wrap > .container {
+      padding-top: 60px;
+    }
+    .container .credit {
+      margin: 20px 0;
+    }
+
+    code {
+      font-size: 80%;
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header role="banner">
-<h1>Order Form Login</h1>
+  <h1 class="marketing">Order Form Login</h1>
 </header>
 
-<main role="main">
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <form id="login-form" method="post" action="#" accept-charset="UTF-8">
+        <fieldset>
 
-  <form id="login-form" method="post" action="" accept-charset="UTF-8">
+          <legend>Please Sign In</legend>
 
-    <fieldset>
+          <div class="form-group">
+            <label for="user-email" class="sr-only control-label">Email</label>
+            <input type="text" id="user-email" name="user[email]" placeholder="Email Address">
+          </div>
 
-      <legend>Please Sign In</legend>
+          <div class="form-group">
+            <label for="user-password" class="sr-only control-label">Password</label>
+            <input type="password" id="user-password" name="user[password]" placeholder="Password">
+          </div>
 
-      <div class="form-group">
-        <label for="user-email" class="sr-only control-label">Email</label>
-        <input type="text" id="user-email" name="user[email]" placeholder="Email Address">
-      </div>
+          <div class="form-group">
+            <input type="submit" value="Sign In" class="btn btn-success control-label">
+          </div>
 
-      <div class="form-group">
-        <label for="user-password" class="sr-only control-label">Password</label>
-        <input type="password" id="user-password" name="user[password]" placeholder="Password">
-      </div>
-
-      <div class="form-group">
-        <input type="submit" value="Sign In" class="btn btn-success control-label">
-      </div>
-
-    </fieldset>
-
+        </fieldset>
+      </form>
+    </div>
+  </div>
 </main>
 
 <footer>
-  <p>
-    <a href="/privacy">Privacy Policy</a> &bull;
-    <a href="/terms">Terms and Conditions</a> &bull;
-    &copy; 2014 Victor Lin Photography
-  </p>
+  <div id="footer">
+    <div class="container">
+      <p class="muted credit">
+        <a href="/privacy">Privacy Policy</a> &bull;
+        <a href="/terms">Terms and Conditions</a> &bull;
+        &copy; 2014 Victor Lin Photography
+      </p>
+    </div>
+  </div>
 </footer>
 
 </body>
