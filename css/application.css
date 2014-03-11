@@ -4,6 +4,7 @@
     html,
     body {
       height: 100%;
+      /*background-image: url("../images/login-background.jpeg");*/
       /* The html and body elements cannot have any padding or margin. */
     }
 
